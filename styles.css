@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* brand color palette */
+  :root {
+    --primary: rgba(68, 88, 119, 1);
+    --secondary: rgba(146, 204, 206, 1);
+    --tertiary: rgba(49, 52, 61, 1);
+    --dark: rgba(28, 29, 33, 1);
+    --light: rgba(238, 238, 247, 1);
+  }
+  
+h2 {text; color: var(--primary); 
+font-weight: bolder; 
+background-color: var(--secondary);
+font: size 200px;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 5px solid var(--secondary);
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  padding-top: 0.5em;}
+ 
+aside {text-align: left;
+text:var(--primary)}
+
+header { position: relative;
+  text-align: right;
+  flex_wrap; 
+  align;right: auto
+  margin; 50px
+  padding;50px 
+  background-color: var(--primary);
+  color: var(--secondary); 
+}
+
+  body {
+    
+ 
+    head { flex-wrap; 
+    align-items;left;
+    padding:50px; 
+    margin: 50px; 
+    background-color: var(--dark);
+}
+  } 
+   .nav {
+
+}
