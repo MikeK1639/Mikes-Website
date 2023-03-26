@@ -1,34 +1,53 @@
-<!DOCTYPE html>
+<html lang="en">
 
-<html lang="en"> 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="styles.css" /> 
-        <title>Link CSS to HTML</title>
-    </head>
-<body>
- 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Portfolio</title>
+</head>
 
-<header> 
-    <nav class="flex container"
-    <div>
-   <h2>Michael Kent</h2>    
-    </div>
-    <ul>
-    <li><a href="#aboutme">About me</a></li>
-    <li><a href="#work">Work</a></li> 
-    <li><a href="contactme">Contact me</a></li> 
-    <li><a href="resume">Resume</a></li>
-    </ul>
-</header>
+<body class="container">
 
-   <main>
-        <aside>
-        <h2>About me</h2> 
-        <h2>Work</h2> 
-        <h2>Contact Me</h2> 
+
+    <header class="site-header">
+        <h1 class="webpage-title">Portfolio</h1>
+        <nav>
+            <ul class="no-bullets nav-li">
+
+                <li class="about-me-link" data-nav-link="">
+                    <a href="#about-me">About me</a>
+                </li>
+
+                <li data-nav-link="">
+                    <a href="#work">Work</a>
+                </li>
+
+                <li data-nav-link="">
+                    <a href="#contact">Contact</a>
+                </li>
+                <li data-nav-link="">
+                    <a href="#resume">Resume</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+        <div class="banner">
+        <h2 class="cool-subtitle">Wubalubadubdub
+            
+
+        </h2>
+
+         </div>
+
+        <aside class="about-container">
+            <h2>About me</h2>
         </aside>
-    </main>
+        <section>
+            <p>My name is Michael Kent</p>
+        </section>
 </body>
+
+</html>

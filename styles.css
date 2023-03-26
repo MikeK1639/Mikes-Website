@@ -1,98 +1,184 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  /* brand color palette */
-  :root {
-    --primary: rgba(68, 88, 119, 1);
-    --secondary: rgba(146, 204, 206, 1);
-    --tertiary: rgba(49, 52, 61, 1);
-    --dark: rgba(28, 29, 33, 1);
-    --light: rgba(238, 238, 247, 1);
-  }
-  
-  .flex-container {
-    display:flex; 
-    
-  }
- 
-  div {text-align: left;}
- 
-header {display: inline }
-
-
-
-ul{ display: inline;
-  list-style-type: none;
-  margin: 0;
+  box-sizing: border-box;
   padding: 0;
-} 
-
-li {
-  display: inline;
+  margin: 0;
 }
 
-  nav a {
-    
-    text-decoration: none;
-    padding: 5px 10px;
-    color: var(--secondary);
-   background-color: var(--primary);
-    margin-right: 10px;
-    background-image: linear-gradient(270deg, var(--secondary) 0%, var(--secondary) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0.2em;
-    background-position: bottom;
-    transition: all 0.25s ease-in;
-    font-size: 1.4rem;
-  }
+:root {
+  --primary: rgba(68, 88, 119, 1);
+  --secondary: rgba(146, 204, 206, 1);
+  --tertiary: rgba(49, 52, 61, 1);
+  --dark: rgba(28, 29, 33, 1);
+  --light: rgba(238, 238, 247, 1);
+}
 
-  nav a:hover {
-    background-size: 100% 100%;
-    color: var(--primary);
-  }
- 
+.webpage-title {
+  padding: 10px 10px 0px 75px;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  font-size: 3rem;
+}
 
-  h2 {text: color; var(--primary); 
-font-weight: bolder; 
-background-color: var(--secondary);
-font: size 200px;
-  margin-bottom: 0.5em;
-  padding-bottom: 0.5em;
-  border-bottom: 5px solid var(--secondary);
-  margin-bottom: 0.5em;
-  margin-top: 0.5em;
-  padding-top: 0.5em;}
- 
-aside {text-align: left;
-text:var(--primary)}
+/*! LINK ANIMATION - DON'T DELETE BELOW THIS LINE */
+.nav-li {
+  display: flex;
+}
 
- flex container header { position: relative
+li[data-nav-link] {
+  padding: 10px;
+  margin: 10px;
+}
+
+a {
+  display: inline-block;
+  font-size: 1.3rem;
+  /* relative so that the pseudo element after is position relative
+     to this `a` element. */
+  position: relative;
+  padding: 5px;
+  border-bottom: 3px solid var(--secondary);
+  color: var(--secondary);
+  text-decoration: none;
+  color: var(--secondary);
+  z-index: 1;
+}
+
+a::after {
+  /* this pseudo element will be place in an absolute position
+     within the `a` parent element */
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* `scaleY` will scale down the pseudo element to 0 so that
+      is not visible. */
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  background: var(--secondary);
+  z-index: -1;
+  /* `transform` is the time it will take for the transition
+      to complete. */
+  transition: transform 0.8s;
+}
+
+a:hover {
+  color: var(--dark);
+}
+
+a:hover::after {
+  /* scales the pseudo element up 100% so that is visible */
+  transform: scaleY(1);
+}
+
+/*! LINK ANIMATION - DON'T DELETE ABOVE THIS LINE */
+
+.site-header {
+  display: flex;
+  background-color: var(--tertiary);
+  padding: 10px;
+  justify-content: space-between;
+}
+
+/* ! NAVIGATION LINKS ON HEADER */
+nav {
+  
+}
+
+ul {
   text-align: right;
-  flex-wrap: 
-  align;right: auto
-  margin;{ 50px}
-  padding {10} 
-  background-color: var(--primary);
-  color: var(--secondary); 
+  padding-right: 30px;
+  list-style-type: none;
 }
 
-  body  {
-    margin: 10;
-    padding: 10;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: var(--primary);
-    background-color: var(--light);
-    line-height: 1.5;
-  }
-    
- 
-   
+/* ! HERO BANNER */
+.banner {
+  grid-area: banner;
+  display: flex;
+  justify-content:flex-end;
+  align-items: flex-end;
+  padding: 40px 260px 40px;
+  height: 200px;
+  background-image: url("assets/images/02-hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  
-main { 
-   background:linear-gradient(0deg, 
-   var(--transblue), var(--transblue)) 
-  
-  
-  }
+.cool-subtitle {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 0px 30px 0 30px;
+  margin-right: 40px;  
+  text-align: right; 
+  font-size: 40px  
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*! :::::::::::::: ABOUT CONTAINER :::::::::::::: */
+.about-container {
+  min-height: 250px;
+  border: 5px dashed red;
+  padding: 20px;
+}
+
+.about-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+  /* align-items: center; */
+  /* min-height: 50%; */
+  max-width: 1400px;
+  padding: 20px;
+  border: 3px dashed purple;
+}
+
+aside {
+  /* flex: 1; */
+  min-width: 30%;
+  min-height: 200px;
+  border: 3px dotted green;
+  margin: 10px 0px 10px;
+}
+
+section {
+  /* flex: 2; */
+  min-width: 68.5%;
+  min-height: 200px;
+  border: 3px dotted green;
+  margin: 10px 0px 10px;
+}
+
+/*! ::::::::::::: IMAGES SECTION ::::::::::::: */
+.img-border {
+  border: 5px solid var(--secondary);
+}
+
+.img-label {
+  position: absolute;
+  top: 420px;
+  background-color: var(--secondary);
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.img-1 {
+  position: relative;
+  /* min-width: 400px; */
+  height: 575px;
+  background-size: 1850px;
+  background-image: url("../images/02-portfolio-4.jpg");
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 993px) {
+
+  /* RESPONSIVE MEDIA CSS GOES HERE */
+
+}
