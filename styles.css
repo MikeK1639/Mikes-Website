@@ -82,8 +82,14 @@ a:hover::after {
 }
 
 /* ! NAVIGATION LINKS ON HEADER */
-nav {
-  
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--primary);
+  background-color: var(--light);
+  line-height: 1.5;
 }
 
 ul {
@@ -114,15 +120,14 @@ ul {
   font-size: 40px  
 }
 
-body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
 
-/*! :::::::::::::: ABOUT CONTAINER :::::::::::::: */
-.about-container {
-  min-height: 250px;
-  border: 5px dashed red;
-  padding: 20px;
+
+.about-container { 
+  border-style: solid;
+  border: 10px
+  padding: 20px; 
+  border-color: var(--dark);
+  border-right: 10px;
 }
 
 .about-flexbox {
@@ -130,19 +135,23 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-around;
-  /* align-items: center; */
-  /* min-height: 50%; */
+  align-items: center;
+  min-height: 50%;
   max-width: 1400px;
   padding: 20px;
   border: 3px dashed purple;
 }
 
+
+
+
 aside {
-  /* flex: 1; */
-  min-width: 30%;
+  flex:1 
+  min-width: 5%;
   min-height: 200px;
   border: 3px dotted green;
-  margin: 10px 0px 10px;
+  margin: 10px 0px 10px; 
+  
 }
 
 section {
