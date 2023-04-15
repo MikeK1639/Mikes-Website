@@ -29,7 +29,7 @@ li[data-nav-link] {
   margin: 10px;
 }
 
-a {
+.nav-anchor {
   display: inline-block;
   font-size: 1.3rem;
   /* relative so that the pseudo element after is position relative
@@ -42,11 +42,11 @@ a {
   color: var(--secondary);
   z-index: 1; 
 
-
+/* vvvvThis is how I got my hover function to workvvv */
 
 }
 
-a::after {
+.nav-anchor::after {
   /* this pseudo element will be place in an absolute position
      within the `a` parent element */
   position: absolute;
@@ -66,16 +66,16 @@ a::after {
   transition: transform 0.8s;
 }
 
-a:hover {
+.nav-anchor:hover {
   color: var(--dark);
 }
 
-a:hover::after {
+.nav-anchor:hover::after {
   /* scales the pseudo element up 100% so that is visible */
   transform: scaleY(1);
 }
 
-/*! LINK ANIMATION - DON'T DELETE ABOVE THIS LINE */
+/* vvvvvThis is the header sectionvvvv */
 
 .site-header {
   display: flex;
@@ -104,7 +104,7 @@ ul {
   list-style-type: none;
 }
 
-/* ! HERO BANNER */
+/* vvvvv  This is the css for the hero banner vvvvv */
 .banner {
   grid-area: banner;
   display: flex;
@@ -158,26 +158,28 @@ proj{
 proj:hover{
   background-blend-mode:normal;    
 }
+  
+/* vvvv I organized my grid section isolating the card elements vvvv */
 
 #big-card{
-  height:300px;
+  height: 350px;
   width:100%;
-  background-image:url("assets/images/02-portfolio-1.jpg");
+  background-image:url("./assets/images/127.0.0.1_5500_Date-on-a-Dime_index.html.png");
 }
 #small-card1{
   height:150px;
   width: 50%;
-  background-image:url("assets/images/02-portfolio-2.jpg");
+  background-image:url("assets/images/02-portfolio-1.jpg");
 }
 #small-card2{
   height:150px;
   width: 50%;
-  background-image:url("assets/images/02-portfolio-3.jpg");
+  background-image:url("assets/images/02-portfolio-2.jpg");
 }
 #small-card3{
   height:150px;
   width:50%;
-  background-image:url("assets/images/02-portfolio-4.jpg");
+  background-image:url("assets/images/02-portfolio-3.jpg");
 }
 #small-card4{
   height:150px;
@@ -224,20 +226,15 @@ proj:hover{
   min-width: 400px;
   height: 575px;
   background-size: 1850px;
-  background-image: url("assets/images/02-portfolio-1.jpg;")
+  background-image: url("assets/images/02-portfolio-1.jpg;");
   margin-bottom: 20px;
 }
  
 
-.card-title {
-text-align: left;
+/* vvvv Media query vvv  */
 
 
-
-
-}
 @media screen and (max-width: 993px) {
 
-  /* RESPONSIVE MEDIA CSS GOES HERE */
-
+  
 }

@@ -1,0 +1,1 @@
+`document.href = 'your site link'
