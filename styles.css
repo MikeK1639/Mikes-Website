@@ -136,6 +136,13 @@ ul {
   flex-direction:row;
   width:100%;
 }
+
+#s{
+  display:flex;
+  flex-direction:row;
+  width:100%;
+}
+
 #card-label{
   width:fit-content;
   display:flex;
@@ -169,7 +176,7 @@ proj:hover{
 #small-card1{
   height:150px;
   width: 50%;
-  background-image:url("assets/images/02-portfolio-1.jpg");
+  background-image:url("./assets/images/localhost_3001_\ \(2\).png");
 }
 #small-card2{
   height:150px;
